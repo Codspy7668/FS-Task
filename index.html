@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Class Timetable</h1>
+        <table class="table table-bordered timetable">
+            <thead>
+                <tr>
+                    <th>Hours</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td data-teacher="Ms. Johnson">Science</td>
+                    <td data-teacher="Mr. Smith">Maths</td>
+                    <td data-teacher="Ms. Johnson">Science</td>
+                    <td data-teacher="Mr. Smith">Maths</td>
+                    <td data-teacher="Ms. Davis">Arts</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td data-teacher="Mr. Brown">Social</td>
+                    <td data-teacher="Mrs. Patel">Hindi</td>
+                    <td data-teacher="Mr. Wilson">English</td>
+                    <td data-teacher="Mr. Brown">Social</td>
+                    <td data-teacher="Mr. Lee">Sports</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="table-secondary">Lunch</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td data-teacher="Ms. Johnson">Science</td>
+                    <td data-teacher="Mr. Smith">Maths</td>
+                    <td data-teacher="Ms. Johnson">Science</td>
+                    <td data-teacher="Mr. Smith">Maths</td>
+                    <td rowspan="2" data-teacher="Ms. Thompson">Project</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td data-teacher="Mr. Brown">Social</td>
+                    <td data-teacher="Mrs. Patel">Hindi</td>
+                    <td data-teacher="Mr. Wilson">English</td>
+                    <td data-teacher="Mr. Brown">Social</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="modal fade" id="optionsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Choose an Option</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button id="contactTeacher" class="btn btn-primary mb-2">Contact Teacher</button>
+                    <button id="showTeacherName" class="btn btn-secondary">Show Teacher's Name</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
